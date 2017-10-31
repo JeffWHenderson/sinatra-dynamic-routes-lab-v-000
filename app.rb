@@ -16,11 +16,11 @@ class App < Sinatra::Base
     @number = params[:number]
     @phrase = params[:phrase]
 
-    counter = 0
+    counter = 0                 #wasn't having luck with ///number.to_i.times do/// it works and looks better though
     ret = ""                              # @result = ""
     while counter < @number.to_i          # @number.times { @result += @phrase }
       ret += "#{@phrase}\n"               #"#{@result}"
-      counter += 1
+      counter += 1               # ///////          @phrase * @number.to_i is cleanest solution   //////////
     end
     ret
   end
