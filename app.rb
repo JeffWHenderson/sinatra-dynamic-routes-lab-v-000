@@ -21,7 +21,7 @@ class App < Sinatra::Base
     while counter < @number.to_i          # @number.times { @result += @phrase }
       ret += "#{@phrase}\n"               #"#{@result}"
       counter += 1               # ///////          @phrase * @number.to_i is cleanest solution   //////////
-    end
+    end                          #///// ex "hello" * 3 == hellohellohello.  needs format fix but works fine ///////
     ret
   end
 
